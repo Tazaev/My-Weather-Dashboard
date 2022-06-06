@@ -9,12 +9,26 @@
   </head>
   <body>
     <!--add header here-->
+    <header class="header">Weather Dashboard</header>
 
     <!--aside section with city search option-->
-    <!--have recent searchs displayed under the search bar-->
+    <aside class="search-bar">
+      <card>
+        <input type="text" placeholder="Search.." />
+        <!--have recent searchs displayed under the search bar-->
+        <p>Recent searches</p>
+        <ul>
+          <li></li>
+        </ul>
+      </card>
+    </aside>
 
     <!--add a main here with a section to display the relevant weather day asked for-->
-    <!--add another section under the first section and add 5 weather cards here-->
+    <main>
+      <section class="displaydata"></section>
+      <!--add another section under the first section and add 5 weather cards here-->
+      <section class="weathercard"></section>
+    </main>
 
     <script src="assets/script.js"></script>
   </body>
