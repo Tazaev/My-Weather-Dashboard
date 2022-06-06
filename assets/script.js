@@ -84,6 +84,8 @@ function fivedayweather() {
     var day3 = responseTwo.list[20].dt_txt;
     var day4 = responseTwo.list[28].dt_txt;
     var day5 = responseTwo.list[36].dt_txt;
+
+    $("#day-1").html("<h5>" + day1.substr(0, 10) + "</h5>");
   });
 }
 //formula for converting to kelvin to two decimal places
