@@ -150,4 +150,17 @@ $("button").on("click", function (event) {
   function renderCities() {
     $(".search-data").prepend("<p>" + city + "</p");
   }
+  var apicall =
+    "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+    latitude +
+    "&lon=" +
+    longitude +
+    "&appid=" +
+    apikey;
+  // use ajax to call out api
+  $.ajax({
+    url: apicall,
+    method: "GET",
+  });
+  // store retrieved data in response
 });
