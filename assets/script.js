@@ -1,6 +1,7 @@
 // add variables here and api
 var apikey = "abd9708dc20c0b406c4985d10d444f03";
 
+// function for search bar search
 function currentWeather() {
   navigator.geolocation.getCurrentPosition(function (position) {
     longitude = position.coords.longitude;
@@ -35,9 +36,23 @@ function currentWeather() {
       });
   });
 }
-// function for search bar
+currentWeather();
 
-// add local sotrage to save recent searches
+// display weather 5 days ahead
+
+function fivedayweather() {
+  var fivedayurl =
+    "https://api.openweathermap.org/data/2.5/forecast?q=San+Diego&appid=" +
+    apikey;
+
+  $.ajax({
+    url: fivedayurl,
+    method: "GET",
+  }).then(function (responseTwo) {
+    var icon1 = responseTwo.list[4].weather[0].icon;
+    var icon1url = "http://openweathermap.org/img/w/" + icon1 + ".png";
+  });
+}
 
 //fetch api info and display on page
 
