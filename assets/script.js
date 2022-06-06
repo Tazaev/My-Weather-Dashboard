@@ -126,11 +126,28 @@ fivedayweather();
 
 //fetch api info and display on page
 $("button").on("click", function (event) {
-    event.preventDefault();
-  
-    var apiKey = "03e24d7d731fc83efc64f5aa4eb937c1";
-    var getWeather = $("#get-weather");
-    var city = getWeather.val().trim();
-    cities.push(city);
-    var message = document.querySelector(".invalid-message");
-//
+  event.preventDefault();
+
+  var apiKey = "03e24d7d731fc83efc64f5aa4eb937c1";
+  var getWeather = $("#get-weather");
+  var city = getWeather.val().trim();
+  cities.push(city);
+  var message = document.querySelector(".invalid-message");
+
+  console.log(getWeather);
+  function listcities() {
+    localStorage.setItem("cities", JSON.stringify(cities));
+  }
+
+  if (city === null || city === "") {
+    message.innerHTML = "Invalid input. Please try again!";
+  } else {
+    message.innerHTML = "";
+    renderCities();
+    listcities();
+    getCities();
+  }
+  function renderCities() {
+    $(".search-data").prepend("<p>" + city + "</p");
+  }
+});
