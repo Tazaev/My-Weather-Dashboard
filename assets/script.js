@@ -161,6 +161,26 @@ $("button").on("click", function (event) {
   $.ajax({
     url: apicall,
     method: "GET",
-  });
-  // store retrieved data in response
+  })
+    // store retrieved data in response
+    .then(function (response) {
+      console.log(apicall);
+      console.log(response);
+      var iconCode = response.weather[0].icon;
+      var iconurl = "http://openweathermap.org/img/w/" + iconCode + ".png";
+      $(".city").html("<h1>" + response.name + "</h1>");
+      $(".temp").text(
+        "Temperature: " +
+          ((response.main.temp - 273.15) * 1.8 + 32).toFixed(0) +
+          " °F"
+      );
+      $(".humidity").text("Humidity: " + response.main.humidity + " %");
+      $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
+      $("#wicon").attr("src", iconurl);
+
+      // Log the data in the console as well
+      console.log("Wind Speed: " + response.wind.speed);
+      console.log("Humidity: " + response.main.humidity);
+      console.log("Temperature (F): " + response.main.temp);
+    });
 });
