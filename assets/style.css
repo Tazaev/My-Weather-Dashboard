@@ -12,7 +12,14 @@
 .search-bar {
   width: 300px;
   background-color: rgb(145, 162, 177);
-  height: 500px;
+  height: 600px;
   justify-content: center;
   text-align: center;
+}
+
+.weathercard {
+  background-color: aliceblue;
+  width: 1000px;
+  height: 305px;
+  margin-left: 300px;
 }
