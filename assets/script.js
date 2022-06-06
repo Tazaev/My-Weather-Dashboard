@@ -63,8 +63,30 @@ function fivedayweather() {
 
     var icon5 = responseTwo.list[4].weather[0].icon;
     var icon5url = "http://openweathermap.org/img/w/" + icon5 + ".png";
+
+    var tempOneF = (responseTwo.list[4].main.temp - 273.15) * 1.8 + 32;
+    var tempOne = tempOneF.toFixed(1);
+
+    var tempTwoF = (responseTwo.list[12].main.temp - 273.15) * 1.8 + 32;
+    var tempTwo = tempTwoF.toFixed(1);
+
+    var tempThreeF = (responseTwo.list[20].main.temp - 273.15) * 1.8 + 32;
+    var tempThree = tempThreeF.toFixed(1);
+
+    var tempFourF = (responseTwo.list[28].main.temp - 273.15) * 1.8 + 32;
+    var tempFour = tempFourF.toFixed(1);
+
+    var tempFiveF = (responseTwo.list[36].main.temp - 273.15) * 1.8 + 32;
+    var tempFive = tempFiveF.toFixed(1);
+
+    var day1 = responseTwo.list[4].dt_txt;
+    var day2 = responseTwo.list[12].dt_txt;
+    var day3 = responseTwo.list[20].dt_txt;
+    var day4 = responseTwo.list[28].dt_txt;
+    var day5 = responseTwo.list[36].dt_txt;
   });
 }
+//formula for converting to kelvin to two decimal places
 
 //fetch api info and display on page
 
