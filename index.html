@@ -38,12 +38,49 @@
 
     <!--add a main here with a section to display the relevant weather day asked for-->
     <main>
-      <section class="displaydata"></section>
+      <section class="displaydata">
+
+      </section>
       <!--add another section under the first section and add 5 weather cards here-->
       <section class="weathercard">
-        <h2>5-Day Weather Forcast</h2>
+        <div class="row">
+          <div class="col-lg-12 forecast-container">
+              <h5 class="five-day">5-Day Forecast</h5>
+              <!-- Day 1 -->
+              <div class="card-deck text-center" style="color: grey;">
+                  <div class="card" style="margin: 2px;">
+                      <div class="card-body forecast-card" id="day-1">
+                          <!-- DAY 1 -->
+                      </div>
+                  </div>
+                  <div class="card" style="margin: 2px;">
+                      <div class="card-body forecast-card" id="day-2">
+                          <!-- Day 2 -->
+                      </div>
+                  </div>
+                  <div class="card" style="margin: 2px;">
+                      <div class="card-body forecast-card" id="day-3">
+                          <!-- Day 3 -->
+                      </div>
+                  </div>
+                  <div class="card" style="margin: 2px;">
+                      <div class="card-body forecast-card" id="day-4">
+                          <!-- Day 4 -->
+                      </div>
+                  </div>
+                  <div class="card" style="margin: 2px;">
+                      <div class="card-body forecast-card" id="day-5">
+                          <!-- Day 5 -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+
       </section>
     </main>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/script.js"></script>
   </body>
