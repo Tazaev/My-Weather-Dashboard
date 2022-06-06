@@ -183,4 +183,20 @@ $("button").on("click", function (event) {
       console.log("Humidity: " + response.main.humidity);
       console.log("Temperature (F): " + response.main.temp);
     });
+
+  var fivedayurl =
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    city +
+    "&appid=" +
+    apiKey;
+  $.ajax({
+    url: fivedayurl,
+    method: "GET",
+  }).then(function (responseTwo) {
+    console.log(fivedayurl);
+    //logs the object from the second response
+    console.log(responseTwo);
+    console.log(responseTwo.list[4].dt_txt);
+    console.log(responseTwo.list[4].main.temp);
+  });
 });
