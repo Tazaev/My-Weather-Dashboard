@@ -122,6 +122,15 @@ function fivedayweather() {
   });
 }
 
-//fetch api info and display on page
+fivedayweather();
 
+//fetch api info and display on page
+$("button").on("click", function (event) {
+    event.preventDefault();
+  
+    var apiKey = "03e24d7d731fc83efc64f5aa4eb937c1";
+    var getWeather = $("#get-weather");
+    var city = getWeather.val().trim();
+    cities.push(city);
+    var message = document.querySelector(".invalid-message");
 //
