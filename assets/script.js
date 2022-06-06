@@ -63,7 +63,7 @@ function fivedayweather() {
 
     var icon5 = responseTwo.list[4].weather[0].icon;
     var icon5url = "http://openweathermap.org/img/w/" + icon5 + ".png";
-
+    //formula for converting to kelvin to two decimal places
     var tempOneF = (responseTwo.list[4].main.temp - 273.15) * 1.8 + 32;
     var tempOne = tempOneF.toFixed(1);
 
@@ -90,37 +90,37 @@ function fivedayweather() {
     $("#day-1").append("<p>" + "Temp: " + tempOne + " °F </p>");
     $("#day-1").append(
       "<p>" + "Humidity: " + responseTwo.list[4].main.humidity + " % </p>"
-      $("#day-2").html("<h5>" + day2.substr(0, 10) + "</h5>");
-      $("#day-2").append("<img src=" + icon2url + ">");
-      $("#day-2").append("<p>" + "Temp: " + tempTwo + " °F </p>");
-      $("#day-2").append(
-        "<p>" + "Humidity: " + responseTwo.list[12].main.humidity + " % </p>"
-      );
-  
-      $("#day-3").html("<h5>" + day3.substr(0, 10) + "</h5>");
-      $("#day-3").append("<img src=" + icon3url + ">");
-      $("#day-3").append("<p>" + "Temp: " + tempThree + " °F </p>");
-      $("#day-3").append(
-        "<p>" + "Humidity: " + responseTwo.list[20].main.humidity + " % </p>"
-      );
-  
-      $("#day-4").html("<h5>" + day4.substr(0, 10) + "</h5>");
-      $("#day-4").append("<img src=" + icon4url + ">");
-      $("#day-4").append("<p>" + "Temp: " + tempFour + " °F </p>");
-      $("#day-4").append(
-        "<p>" + "Humidity: " + responseTwo.list[28].main.humidity + " % </p>"
-      );
-  
-      $("#day-5").html("<h5>" + day5.substr(0, 10) + "</h5>");
-      $("#day-5").append("<img src=" + icon5url + ">");
-      $("#day-5").append("<p>" + "Temp: " + tempFive + " °F </p>");
-      $("#day-5").append(
-        "<p>" + "Humidity: " + responseTwo.list[36].main.humidity + " % </p>"
-      );
+    );
+
+    $("#day-2").html("<h5>" + day2.substr(0, 10) + "</h5>");
+    $("#day-2").append("<img src=" + icon2url + ">");
+    $("#day-2").append("<p>" + "Temp: " + tempTwo + " °F </p>");
+    $("#day-2").append(
+      "<p>" + "Humidity: " + responseTwo.list[12].main.humidity + " % </p>"
+    );
+
+    $("#day-3").html("<h5>" + day3.substr(0, 10) + "</h5>");
+    $("#day-3").append("<img src=" + icon3url + ">");
+    $("#day-3").append("<p>" + "Temp: " + tempThree + " °F </p>");
+    $("#day-3").append(
+      "<p>" + "Humidity: " + responseTwo.list[20].main.humidity + " % </p>"
+    );
+
+    $("#day-4").html("<h5>" + day4.substr(0, 10) + "</h5>");
+    $("#day-4").append("<img src=" + icon4url + ">");
+    $("#day-4").append("<p>" + "Temp: " + tempFour + " °F </p>");
+    $("#day-4").append(
+      "<p>" + "Humidity: " + responseTwo.list[28].main.humidity + " % </p>"
+    );
+
+    $("#day-5").html("<h5>" + day5.substr(0, 10) + "</h5>");
+    $("#day-5").append("<img src=" + icon5url + ">");
+    $("#day-5").append("<p>" + "Temp: " + tempFive + " °F </p>");
+    $("#day-5").append(
+      "<p>" + "Humidity: " + responseTwo.list[36].main.humidity + " % </p>"
     );
   });
 }
-//formula for converting to kelvin to two decimal places
 
 //fetch api info and display on page
 
