@@ -86,6 +86,11 @@ function fivedayweather() {
     var day5 = responseTwo.list[36].dt_txt;
 
     $("#day-1").html("<h5>" + day1.substr(0, 10) + "</h5>");
+    $("#day-1").append("<img src=" + icon1url + ">");
+    $("#day-1").append("<p>" + "Temp: " + tempOne + " °F </p>");
+    $("#day-1").append(
+      "<p>" + "Humidity: " + responseTwo.list[4].main.humidity + " % </p>"
+    );
   });
 }
 //formula for converting to kelvin to two decimal places
