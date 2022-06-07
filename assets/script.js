@@ -213,5 +213,7 @@ $("button").on("click", function (event) {
 
     var icon5 = responseTwo.list[4].weather[0].icon;
     var icon5url = "http://openweathermap.org/img/w/" + icon5 + ".png";
+
+    $("#day-1").html("<h5>" + day1.substr(0, 10) + "</h5>");
   });
 });
