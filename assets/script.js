@@ -42,7 +42,7 @@ currentWeather();
 
 function fivedayweather() {
   var fivedayurl =
-    "https://api.openweathermap.org/data/2.5/forecast?q=San+Diego&appid=" +
+    "https://api.openweathermap.org/data/2.5/forecast?q=New+York&appid=" +
     apikey;
 
   $.ajax({
@@ -198,5 +198,20 @@ $("button").on("click", function (event) {
     console.log(responseTwo);
     console.log(responseTwo.list[4].dt_txt);
     console.log(responseTwo.list[4].main.temp);
+
+    var icon1 = responseTwo.list[4].weather[0].icon;
+    var icon1url = "http://openweathermap.org/img/w/" + icon1 + ".png";
+
+    var icon2 = responseTwo.list[4].weather[0].icon;
+    var icon2url = "http://openweathermap.org/img/w/" + icon2 + ".png";
+
+    var icon3 = responseTwo.list[4].weather[0].icon;
+    var icon3url = "http://openweathermap.org/img/w/" + icon3 + ".png";
+
+    var icon4 = responseTwo.list[4].weather[0].icon;
+    var icon4url = "http://openweathermap.org/img/w/" + icon4 + ".png";
+
+    var icon5 = responseTwo.list[4].weather[0].icon;
+    var icon5url = "http://openweathermap.org/img/w/" + icon5 + ".png";
   });
 });
