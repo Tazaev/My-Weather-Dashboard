@@ -54,11 +54,11 @@ h5 {
 }
 
 .searchCol {
-  height: 100vh;
+  height: 100px;
   background-color: whitesmoke;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  margin-right: -1rem;
+  padding-top: 16px;
+  padding-right: 32px;
+  margin-right: -16px;
 }
 .card {
   background-color: rgb(137, 137, 164);
